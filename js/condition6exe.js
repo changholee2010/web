@@ -10,7 +10,17 @@ if (num1 > num2) {
 } else {
   console.log("두수중에서 큰값은 " + num2 + "입니다.")
 }
+
 // 2. 임의의 2개의 수(40~ 70)를 생성. "2개의 수중에서 큰값은 ??, 작은값은 ??"
+num1 = Math.floor(Math.random() * 31) + 40; // 40 <= x <= 70
+num2 = Math.floor(Math.random() * 31) + 40;
+if (num1 > num2) {
+  console.log("2개의 수중에서 큰값은 " + num1 + ", 작은값은 " + num2);
+} else if (num1 == num2) {
+  console.log("2개의 수는 같습니다.");
+} else {
+  console.log("2개의 수중에서 큰값은 " + num2 + ", 작은값은 " + num1);
+}
 
 // 3. condition3.js에 "A","B","C","D","F" => 95이상이면 A+
 
