@@ -69,3 +69,7 @@ function makeTr(emp = {}) {
   return str;
 } // end of makeTr.
 
+function deleteTr(e) {
+  console.log(e);
+  e.target.parentElement.parentElement.remove();
+}
