@@ -46,6 +46,7 @@ document.querySelector('button#searchBtn')
 document.querySelector('select#selectGender')
   .addEventListener('change', function () {
     // 입력값
+    console.log(this);
     let searchValue = document.querySelector('#selectGender').value;
     let list = "";
     for (let emp of data) {
