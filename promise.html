@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let data = ['a', 'b'];
+        let [n1, n2] = data;
+        console.log(n1, n2);
+
+        function loadData() {
+            // promise 객체.
+            let promise = new Promise(function (resolve, reject) {
+                try {
+                    let xhtp = new XMLHttpRequest();
+                    xhtp.open('get', 'js/jsonData.js');
+                    xhtp.send();
+                    xhtp.onload = function () {
+                        console.log(xhtp);
+                        let result = xhtp.responseText;
+                        let json = result.substring(result.indexOf('`') + 1, result.lastIndexOf('`'));
+                        data = JSON.parse(json);
+                        resolve(data);
+                    }
+                } catch (err) {
+                    reject(err);
+                }
+            })
+
+            // promise 메소드.
+            promise
+                .then(resolve => {
+                    console.log(resolve);
+                })
+                .catch(reject => {
+                    console.log(reject);
+                })
+
+        } // end of loadData().
+
+        // call function.
+        loadData();
+    </script>
+</body>
+
+</html>
