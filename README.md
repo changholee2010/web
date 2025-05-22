@@ -2,9 +2,11 @@
 
 #### 변수
    1. [변수선언]
+   2. [데이터 타입]
 
 
 [변수선언]: https://github.com/changholee2010/web/blob/master/js/variable/variable1.js
+[데이터 타입]: https://github.com/changholee2010/web/blob/master/js/variable/variable2.js
 
 
 #### 연산자
